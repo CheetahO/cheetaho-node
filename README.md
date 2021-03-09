@@ -50,11 +50,39 @@ var optSettings = {
     url: 'http://example.com/example.jpg'
 };
 
-cheetaho.optimize(optSettings, function(err, data) {
+cheetaho.optimizeUrl(optSettings, function(err, data) {
     if (err) {
         console.log('Optimization failed. Error message: %s', err);
     } else {
-        console.log('Success optimized image URL: %s', data.kraked_url);
+        console.log('Success optimized image URL: %s', data);
+    }
+});
+````
+
+
+## Optimize images using file upload
+
+Start image optimization by uploading image URL to `cheetaho.optimizeUpload()` method. You will need to provide few mandatory parameters. Parameter `file` is a path to file or a Stream Object:
+
+````js
+var CheetahO = require('cheetaho');
+
+var cheetaho = new CheetahO({
+    api_key: 'your-api-key'
+});
+
+var optSettings = {
+    file: './example/data/150.png',
+    compression: 'lossy',
+    keep_exif: 0,
+    web_p: 0
+};
+
+cheetaho.optimizeUpload(optSettings, function(err, data) {
+    if (err) {
+        console.log('Optimization failed. Error message: %s', err);
+    } else {
+        console.log('Success optimized image URL: %s', data);
     }
 });
 ````
@@ -73,3 +101,9 @@ NOTE: Be sure to keep up to date the plugin tests and code quality.
 
 MIT License
 (c) [CheetahO](https://cheetaho.com)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
