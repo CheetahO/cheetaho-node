@@ -1,0 +1,37 @@
+{
+  "name": "cheetaho-node",
+  "version": "1.0.0",
+  "author": {
+    "name": "Cheetaho.com",
+    "email": "support@cheetaho.com"
+  },
+  "description": "Node module to optimize and compress PNG, JPG, Gif images using CheetahO compression algorithms",
+  "homepage": "https://github.com/CheetahO/cheetaho-node",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CheetahO/cheetaho-node.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "Error: no test specified && exit 1",
+    "install": "npm install"
+  },
+  "dependencies": {
+    "request": "2.88.0"
+  },
+  "keywords": [
+    "kraken",
+    "cheetaho.com",
+    "image optimizer",
+    "image optimiser",
+    "image optimiser",
+    "smushit",
+    "png",
+    "jpg",
+    "gif",
+    "compress image",
+    "web performance",
+    "webperf"
+  ],
+  "license": "MIT"
+}
