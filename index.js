@@ -1,5 +1,5 @@
 /*
- * cheetaho-node
+ * CheetahO Node library
  * https://github.com/CheetahO/cheetaho-node
  *
  * Copyright (c) 2021 CheetahO
@@ -22,7 +22,7 @@ var request = require("request"),
 var cheetaho = module.exports = function (options) {
     this.headers = {
         key: options.api_key || "",
-        'User-Agent': 'cheetaho-node'
+        'User-Agent': 'CheetahO-node'
     }
 };
 

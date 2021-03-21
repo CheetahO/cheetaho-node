@@ -1,14 +1,13 @@
 var CheetahO = require('../../cheetaho-node');
 
 var cheetaho = new CheetahO({
-    api_key: 'xxxx'
+    api_key: 'xxx'
 });
 
 var optSettings = {
     url: 'https://app.cheetaho.com/storage/demo/underC.jpg',
     compression: 'lossy',
-    keep_exif: false,
-    web_p: false
+    keep_exif: false
 };
 
 cheetaho.optimizeUrl(optSettings, function (err, response) {

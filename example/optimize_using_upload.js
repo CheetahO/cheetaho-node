@@ -1,14 +1,13 @@
 var CheetahO = require('../../cheetaho-node');
 
 var cheetaho = new CheetahO({
-    api_key: 'xxxx'
+    api_key: 'xxx'
 });
 
 var optSettings = {
     file: './example/data/150.png',
     compression: 'lossy',
-    keep_exif: 0,
-    web_p: 0
+    keep_exif: 0
 };
 
 cheetaho.optimizeUpload(optSettings,function(err, response) {
