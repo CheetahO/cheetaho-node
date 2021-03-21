@@ -74,8 +74,7 @@ var cheetaho = new CheetahO({
 var optSettings = {
     file: './example/data/150.png',
     compression: 'lossy',
-    keep_exif: 0,
-    web_p: 0
+    keep_exif: 0
 };
 
 cheetaho.optimizeUpload(optSettings, function(err, data) {
